@@ -1,4 +1,4 @@
-PREF=2020-NaaktgeborenC+AndradeFN-BravLatNam
+PREF=2020-NaaktgeborenC-IFTHA
 
 clean:
 	for EXT in log aux blg bbl out toc dvi; do \
