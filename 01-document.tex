@@ -36,11 +36,11 @@
 \section{Introduction}
 
     The air-standard, finite-time heat addition Otto engine model~\cite{2017-NaaktgeborenC-IntJMechEngEduc}, or `FTHA Otto'  for
-    short, is a pure-substance, equilibrium engineering thermodynamics model that captures the effects of non-instantaneous heat
-    addition in Otto engine model types by allowing for simultaneous heat and work interactions of  the  gaseous  closed  system
-    formed by the piston-cylinder arrangement. It uses process discretization  into  $i$-subprocesses,  along  with  homogeneous
-    local        polytropic        modeling,        whose        proposal        was        further         developed         on
-    reference~\cite{2020-NaaktgeborenC-Polytropic-engrXiv-rev02}.
+    short, is a pure-substance, equilibrium engineering thermodynamics teaching model aimed at senior  undergraduate  Mechanical
+    Engineering (ME) students that captures the effects of non-instantaneous  heat  addition  in  Otto  engine  model  types  by
+    allowing for simultaneous heat and work interactions of the gaseous closed system formed by the piston-cylinder arrangement.
+    It uses process discretization into $i$-subprocesses, along with homogeneous local polytropic modeling, whose  proposal  was
+    further developed on reference~\cite{2020-NaaktgeborenC-Polytropic-engrXiv-rev02}.
 
     Since all FTHA Otto model processes are modeled as local polytropic ones, the solution procedure boils down to  finding  the
     polytropic exponent $n_i$, for each $i$-th process, that satisfies the first law of thermodynamics for the  given  substance
@@ -55,10 +55,13 @@
     substance's specific internal energy, (ii)~solving for the temperature (iii)~and pressure with the substance's specific heat
     and state models, which may incur in additional iterative procedures, before finally (iv)~yielding a corrected $n_i^{j+1}$.
 
-    A further look into polytropic processes~\cite{2012-ChristiansJ-IntJMechEngEduc} reveals that the polytropic exponent can be 
+    A deeper look into polytropic processes~\cite{2012-ChristiansJ-IntJMechEngEduc, 2020-NaaktgeborenC-Polytropic-engrXiv-rev02}
+    reveals that the polytropic exponent can be \emph{directly} determined  for  a  local  polytropic  process  if  the  working
+    substance is an ideal gas~\cite{2020-NaaktgeborenC-Polytropic-engrXiv-rev02} and if the heat-to-work  transfer  ratio,  also
+    referred to as energy transfer ratio~\cite{2012-ChristiansJ-IntJMechEngEduc}, and specific heat ratio are known.
 
-    if the heat-to-work transfer
-    ratio, also referred to as energy transfer ratio
+    Since these conditions are met for FTHA Otto cycles with ideal gas working substance---the usual application---it means  the
+    FTHA  Otto  solution  procedure  can  be  analytically  simplified,  leading  to  improved  learning  and  faster   computer
+    implementations
 
-    The development of reference~\cite{2020-NaaktgeborenC-Polytropic-engrXiv-rev02}
 
