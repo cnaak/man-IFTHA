@@ -47,12 +47,15 @@
 \addtolength{\lenWHAT}{-\lensymb}
 \par\noindent\begin{supertabular}{@{}p{\lensymb}@{}p{\lenwhat}@{\hspace{\lencsep}}p{\lendefn}}
     \multicolumn{3}{@{}l}{\em Latin symbols:} \\
+    $c$             & Specific heat, \kilo\joule\per\kilogram\usk\kelvin            & Eq.~(\ref{eq:def.gamma})          \\
+    $K$             & Heat-to-work transfer ratio, ---,                             & Eq.~(\ref{eq:def.K})              \\
     $n$             & Polytropic exponent, ---,                                     & Eq.~(\ref{eq:soln:ste.l})         \\[6pt]
     \multicolumn{3}{@{}l}{\em Greek symbols:} \\
-    $\beta$         & Complex temperature temporal parameter, ---,                  & Eq.~(\ref{eq:soln.compl})         \\
-    $\gamma$        & Specific heat ratio, ---,                                     & Eq.~(\ref{eq:soln.compl})         \\[6pt]
+    $\gamma$        & Specific heat ratio, ---,                                     & Eq.~(\ref{eq:def.gamma})          \\[6pt]
     \multicolumn{3}{@{}l}{\em Subscripts:} \\
-    $i$             & \multicolumn{2}{@{}p{\lenWHAT}}{process index}                                                    \\[6pt]
+    $i$             & \multicolumn{2}{@{}p{\lenWHAT}}{process index}                                                    \\
+    $P$             & \multicolumn{2}{@{}p{\lenWHAT}}{taken at constant pressure}                                       \\
+    $v$             & \multicolumn{2}{@{}p{\lenWHAT}}{taken at constant specific volume}                                \\[6pt]
     \multicolumn{3}{@{}l}{\em Superscripts:} \\
     $j$             & \multicolumn{2}{@{}p{\lenWHAT}}{polytropic exponent loop index}                                   \\
 \end{supertabular}
@@ -98,7 +101,14 @@
     \end{equation}
     %
     \noindent where $c_P$ and $c_v$ are the isobaric and isochoric specific heats, are known---the resulting polytropic exponent
-    is   given   on   references~\cite{2012-ChristiansJ-IntJMechEngEduc,   2020-NaaktgeborenC-Polytropic-engrXiv-rev02},   while
+    is   given   on   references~\cite{2012-ChristiansJ-IntJMechEngEduc,   2020-NaaktgeborenC-Polytropic-engrXiv-rev02} as%
+    %
+    \begin{equation}
+        n = \gamma + K(1 - \gamma),
+        \label{eq:n}
+    \end{equation}
+    %
+    \noindent while
     theoretical requisites are further discussed in~\cite{2020-NaaktgeborenC-Polytropic-engrXiv-rev02}.
 
     As FTHA Otto can meet the necessary conditions for determining the polytropic exponents base on $K$ and $\gamma$, this means
