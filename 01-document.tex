@@ -35,12 +35,19 @@
 
 \section{Introduction}
 
-    The air-standard, finite-time heat addition Otto engine model~\cite{2017-NaaktgeborenC-IntJMechEngEduc} is a pure-substance,
-    engineering thermodynamics model that captures the effects of non-instantaneous heat addition in Otto engine model types  by
-    allowing for simultaneous heat and work interactions of the gaseous closed system formed by the piston-cylinder arrangement.
-    It uses process discretization into sub-processes, along with homogeneous local  polytropic  modeling,  whose  proposal  was
-    further developed on reference~\cite{2020-NaaktgeborenC-Polytropic-engrXiv-rev02}.
+    The air-standard, finite-time heat addition Otto engine model~\cite{2017-NaaktgeborenC-IntJMechEngEduc}, of `FTHA Otto'  for
+    short, is a pure-substance, engineering thermodynamics model that captures the effects of non-instantaneous heat addition in
+    Otto engine model types by allowing for simultaneous heat and work interactions of the gaseous closed system formed  by  the
+    piston-cylinder arrangement. It uses process discretization into $i$-sub-processes, along with homogeneous local  polytropic
+    modeling, whose proposal was further developed on reference~\cite{2020-NaaktgeborenC-Polytropic-engrXiv-rev02}.
 
-    % aimed at senior undergraduate Mechanical Engineering (ME) student
+    Since all FTHA Otto model processes are modeled as local polytropic ones, the solution procedure boils down to  finding  the
+    polytropic exponent $n_i$, for each $i$-th process, that satisfies the first law of thermodynamics for the  gievn  substance
+    model and external (engine) volume constraints. The solution procedure proposed in the original FTHA Otto cycle involves  an
+    iterative process for each $n_i$ exponent, that yields successive  corrections  $n_i^j$  that  converge  towards  the  $n_i$
+    solution. This means  the  solution  for  the  \emph{cycle}  involves  \emph{two  nested  loops}:  an  outer  `$i$-loop'  of
+    sub-processes along the cycle, each having an inner `$j$-loop' for the polytropic exponent convergence.
+
+    
 
 
