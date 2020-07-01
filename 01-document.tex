@@ -35,6 +35,26 @@
 
 \section*{Nomenclature}
 
+\newlength{\lencsep}\setlength{\lencsep}{0.8em}
+\newlength{\lensymb}\setlength{\lensymb}{2.5em}
+\newlength{\lendefn}\setlength{\lendefn}{4.0em}
+\newlength{\lenwhat}\setlength{\lenwhat}{\linewidth}
+\newlength{\lenWHAT}\setlength{\lenWHAT}{\linewidth}
+\addtolength{\lenwhat}{-\lensymb}
+\addtolength{\lenwhat}{-\lendefn}
+\addtolength{\lenwhat}{-\lencsep}
+\addtolength{\lenWHAT}{-\lensymb}
+\par\noindent\begin{supertabular}{@{}p{\lensymb}@{}p{\lenwhat}@{\hspace{\lencsep}}p{\lendefn}}
+    $n$             & Polytropic exponent, ---,                                     & Eq.~(\ref{eq:soln:ste.l})         \\[6pt]
+    \multicolumn{3}{@{}l}{\em Greek symbols:} \\
+    $\beta$         & Complex temperature temporal parameter, ---,                  & Eq.~(\ref{eq:soln.compl})         \\
+    $\gamma$        & Specific heat ratio, ---,                                     & Eq.~(\ref{eq:soln.compl})         \\[6pt]
+    \multicolumn{3}{@{}l}{\em Subscripts:} \\
+    $i$             & \multicolumn{2}{@{}p{\lenWHAT}}{process index}                                                    \\[6pt]
+    \multicolumn{3}{@{}l}{\em Superscripts:} \\
+    $j$             & \multicolumn{2}{@{}p{\lenWHAT}}{polytropic exponent loop index}                                   \\
+\end{supertabular}
+
 
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                         Introduction                                                         %
