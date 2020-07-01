@@ -60,6 +60,7 @@
     $max$           & \multicolumn{2}{@{}p{\lenWHAT}}{maximum}                                                          \\
     $min$           & \multicolumn{2}{@{}p{\lenWHAT}}{minimum}                                                          \\
     $P$             & \multicolumn{2}{@{}p{\lenWHAT}}{taken at constant pressure}                                       \\
+    $u$             & \multicolumn{2}{@{}p{\lenWHAT}}{unit or unitary}                                                  \\
     $v$             & \multicolumn{2}{@{}p{\lenWHAT}}{taken at constant specific volume}                                \\[6pt]
     \multicolumn{3}{@{}l}{\em Superscripts:} \\
     $j$             & \multicolumn{2}{@{}p{\lenWHAT}}{polytropic exponent loop index}                                   \\
@@ -141,11 +142,33 @@
     and%
     %
     \begin{equation}
-        V_d = z(V_{max} - V_{min}),
+        V_d = z(V_{max} - V_{min}) = zV_{du},
         \label{eq:Vd}
     \end{equation}
     %
-    \noindent where $z$ is the engine number of cylinders.
-
+    \noindent where $z$ is the engine number of cylinders and $V_{du}$ the unit displacement volume. Let further $S$,  $D$,  and
+    $r_{SD}$ be the piston stroke, diameter, and their ratio, respectively. Moreover, let $R$, $L$, and $r_{LR}$  be  the  crank
+    radius, conecting rod length, and their ratio, respectively. Let further $x$ and $\alpha$ be the instantaneous piston
+    position, measured from the top dead center (TDC), and crank angular position, respectively, so that $\alpha = 0$ at the
+    TDC, then, the following hold~\cite{2012-BrunettiF-Blucher, 2017-NaaktgeborenC-IntJMechEngEduc}:%
+    %
+    \begin{align}
+        \label{eq:S}
+        S           &= 2R = \frac{4 V_{du}}{\pi D^{2}}, \\
+        \label{eq:Vdu}
+        V_{du}      &= V_{max} - V_{min} = \frac{\pi S}{4} D^{2}, \\
+        \label{eq:r}
+        r           &= \frac{V_{max}}{V_{min}} = 1 + \frac{V_{du}}{V_{min}}, \\
+        \label{eq:x}
+        x(\alpha)   &=
+            L\left[
+                1 - \sqrt{
+                    1 - \left(\frac{R}{L}\sin\alpha\right)^2
+                }
+            \right]+
+            R\left(
+                1 - \cos\alpha
+            \right).
+    \end{align}
 
 
