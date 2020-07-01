@@ -72,10 +72,12 @@
     simultaneous heat and work interactions of the working closed system. It  uses  process  discretization  into  subprocesses,
     which are homogeneously modeled as local polytropic processes.
 
-    The solution procedure for the FTHA is the determination of initial state and polytropic exponent for each one of the
-    subprocesses along the cycle. Initial state determination requires a marching---in time, or, equivalently, engine crank
-    angle---solution strategy, in which the next subprocess initial state coincides with the current process end state. The
-    determination of the polytropic expoent, in the other hand, requires 
+    The solution procedure for the FTHA is the determination of (i)~initial state and (ii)~polytropic exponent for each  one  of
+    the subprocesses along the cycle. Initial state determination requires a marching---in time, or, equivalently, engine  crank
+    angle---solution strategy, in which the next subprocess initial state coincides with the  current  process  end  state.  The
+    determination of the polytropic exponent, on the other hand, requires an iterative prediction-correction procedure; hence, a
+    nested, multi-step inner loop that may require yet another nested inner loop for state determination  whenever  the  working
+    substance specific heat is a function of the temperature, which is the most common case.
 
     along with homogeneous local polytropic subprocess modeling, whose proposal  was  further
     developed on reference~\cite{2020-NaaktgeborenC-Polytropic-engrXiv-rev02}.
