@@ -66,10 +66,19 @@
 
     The air-standard, finite-time heat addition Otto engine model~\cite{2017-NaaktgeborenC-IntJMechEngEduc}, or `FTHA Otto'  for
     short, is a pure-substance, equilibrium engineering thermodynamics teaching model aimed at senior  undergraduate  Mechanical
-    Engineering (ME) students. The model that captures the effects of non-instantaneous heat addition in Otto engine model types
-    by allowing for simultaneous heat and work  interactions  of  the  gaseous  closed  system  formed  by  the  piston-cylinder
-    arrangement. It uses process discretization into $i$-subprocesses, along with homogeneous local polytropic  modeling,  whose
-    proposal was further developed on reference~\cite{2020-NaaktgeborenC-Polytropic-engrXiv-rev02}.
+    Engineering (ME) students.
+
+    The model captures the effects of non-in\-stan\-ta\-neous  heat  addition  in  Otto  engine  model  types  by  allowing  for
+    simultaneous heat and work interactions of the working closed system. It  uses  process  discretization  into  subprocesses,
+    which are homogeneously modeled as local polytropic processes.
+
+    The solution procedure for the FTHA is the determination of initial state and polytropic exponent for each one of the
+    subprocesses along the cycle. Initial state determination requires a marching---in time, or, equivalently, engine crank
+    angle---solution strategy, in which the next subprocess initial state coincides with the current process end state. The
+    determination of the polytropic expoent, in the other hand, requires 
+
+    along with homogeneous local polytropic subprocess modeling, whose proposal  was  further
+    developed on reference~\cite{2020-NaaktgeborenC-Polytropic-engrXiv-rev02}.
 
     Since all FTHA Otto model processes are modeled as local polytropic ones, the solution procedure boils down to  finding  the
     polytropic exponent $n_i$, for each $i$-th process, that satisfies the first law of thermodynamics for the  given  substance
