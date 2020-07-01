@@ -13,14 +13,16 @@ SYNOPSIS
         where COMMAND is one of:
             help (no args)
                 Print this and exits.
-            BASE (no args)
-                Lists the accessible bibliography database, one file per line.
-            LIST (no args)
+            BASE [<args>]
+                Lists the accessible bibliography database, one file  per  line,
+                optionally filtering by <args>.
+            LIST [<args>]
                 Lists keys on the default bibfile ./bibfile.bib initializing  it
-                if needed.
-            LST (no args)
+                if needed, optionally filtering by <args>.
+            LST [<args>]
                 Generates a machine-readable list of keys from  default  bibfile
-                ./bibfile.bib initializing it if needed.
+                ./bibfile.bib initializing it if needed, optionally filtering by
+                <args>.
             ADD <bibpats>
                 Adds all bibliographic entries from files matching each  one  of
                 the <bibpats>  (no  wildcards),  if  existing,  to  the  default
@@ -128,8 +130,18 @@ function lstBib() {
     fi
 }
 
-function dbase() {
+function _dbase() {
     find -L . -name '*\.bib' | grep -v "${THEBIB}" | sort -n
+}
+
+function dbase() {
+    if [ "$#" -lt 1 ]; then
+        _dbase
+    else
+        p="$1"
+        shift
+        dbase "$@" | grep "$p"
+    fi
 }
 
 function dbfiles() {
@@ -194,7 +206,7 @@ case "${COMM}" in
     #                           Remote DBs opts                            #
     #----------------------------------------------------------------------#
     "BASE")
-        dbase;;
+        dbase "$@";;
     #----------------------------------------------------------------------#
     #                              Query opts                              #
     #----------------------------------------------------------------------#
