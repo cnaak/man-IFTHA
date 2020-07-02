@@ -37,7 +37,7 @@
 \addcontentsline{toc}{section}{Nomenclature}
 
 \newlength{\lencsep}\setlength{\lencsep}{0.8em}
-\newlength{\lensymb}\setlength{\lensymb}{2.5em}
+\newlength{\lensymb}\setlength{\lensymb}{3.0em}
 \newlength{\lendefn}\setlength{\lendefn}{4.0em}
 \newlength{\lenwhat}\setlength{\lenwhat}{\linewidth}
 \newlength{\lenWHAT}\setlength{\lenWHAT}{\linewidth}
@@ -168,11 +168,17 @@
         \label{eq:r}
         r           &= \frac{V_{max}}{V_{min}} = 1 + \frac{V_{du}}{V_{min}}, \\
         \label{eq:x}
-        x(\alpha)   &=
-            L\left(
-                1 - \sqrt{1 - (r_{RL}\sin\alpha)^2}
-            \right) \nonumber\\
-                    &+ R(1 - \cos\alpha).
+        x(\alpha)   &= \left[
+                \begin{matrix}
+                    \textstyle L &
+                    \textstyle R
+                \end{matrix}
+            \right]\times\left[
+                \begin{matrix}
+                    \textstyle \;1 - \sqrt{1 - (r_{RL}\sin\alpha)^2}\; \\[\smallskipamount]
+                    \textstyle 1 - \cos\alpha
+                \end{matrix}
+            \right]
     \end{align}
 
 
