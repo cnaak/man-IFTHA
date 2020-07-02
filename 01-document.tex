@@ -63,8 +63,8 @@
     \multicolumn{3}{@{}l}{\em Subscripts:} \\
     $d$             & \multicolumn{2}{@{}p{\lenWHAT}}{displaced}                                                        \\
     $i$             & \multicolumn{2}{@{}p{\lenWHAT}}{process index}                                                    \\
-    $max$           & \multicolumn{2}{@{}p{\lenWHAT}}{maximum}                                                          \\
-    $min$           & \multicolumn{2}{@{}p{\lenWHAT}}{minimum}                                                          \\
+    ${}_{\mathrm{BDC}}$     & \multicolumn{2}{@{}p{\lenWHAT}}{Bottom Dead Center}                                       \\
+    ${}_{\mathrm{TDC}}$     & \multicolumn{2}{@{}p{\lenWHAT}}{Top Dead Center}                                          \\
     $P$             & \multicolumn{2}{@{}p{\lenWHAT}}{taken at constant pressure}                                       \\
     $RL$            & \multicolumn{2}{@{}p{\lenWHAT}}{of $R/L$}                                                         \\
     $SD$            & \multicolumn{2}{@{}p{\lenWHAT}}{of $S/D$}                                                         \\
@@ -149,11 +149,11 @@
     \subsection{Engine Model}
 
     Following Brunetti~\cite{2012-BrunettiF-Blucher}, the dynamics of the piston-crank mechanism are accounted  for  as  far  as
-    volume variation is concerned. Thus, system minimum (dead), maximum and engine displaced volumes are  $V_{min}$,  $V_{max}$,
+    volume variation is concerned. Thus, system minimum (dead), maximum and engine displaced volumes are  $V_{\mathrm{TDC}}$,  $V_{\mathrm{BDC}}$,
     and%
     %
     \begin{equation}
-        V_d = z(V_{max} - V_{min}) = zV_{du},
+        V_d = z(V_{\mathrm{BDC}} - V_{\mathrm{TDC}}) = zV_{du},
         \label{eq:Vd}
     \end{equation}
     %
@@ -167,9 +167,9 @@
         \label{eq:S}
         S           &= 2R = \frac{4 V_{du}}{\pi D^{2}}, \\
         \label{eq:Vdu}
-        V_{du}      &= V_{max} - V_{min} = \frac{\pi S}{4} D^{2}, \\
+        V_{du}      &= V_{\mathrm{BDC}} - V_{\mathrm{TDC}} = \frac{\pi S}{4} D^{2}, \\
         \label{eq:r}
-        r           &= \frac{V_{max}}{V_{min}} = 1 + \frac{V_{du}}{V_{min}}, \\
+        r           &= \frac{V_{\mathrm{BDC}}}{V_{\mathrm{TDC}}} = 1 + \frac{V_{du}}{V_{\mathrm{TDC}}}, \\
         \label{eq:x}
         x(\alpha)   &= \left[
                 \begin{matrix}
