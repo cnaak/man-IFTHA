@@ -63,10 +63,10 @@
     \multicolumn{3}{@{}l}{\em Subscripts:} \\
     $d$             & \multicolumn{2}{@{}p{\lenWHAT}}{displaced}                                                        \\
     $i$             & \multicolumn{2}{@{}p{\lenWHAT}}{process index}                                                    \\
-    $LR$            & \multicolumn{2}{@{}p{\lenWHAT}}{of $L/R$}                                                         \\
     $max$           & \multicolumn{2}{@{}p{\lenWHAT}}{maximum}                                                          \\
     $min$           & \multicolumn{2}{@{}p{\lenWHAT}}{minimum}                                                          \\
     $P$             & \multicolumn{2}{@{}p{\lenWHAT}}{taken at constant pressure}                                       \\
+    $RL$            & \multicolumn{2}{@{}p{\lenWHAT}}{of $R/L$}                                                         \\
     $SD$            & \multicolumn{2}{@{}p{\lenWHAT}}{of $S/D$}                                                         \\
     $u$             & \multicolumn{2}{@{}p{\lenWHAT}}{unit or unitary}                                                  \\
     $v$             & \multicolumn{2}{@{}p{\lenWHAT}}{taken at constant specific volume}                                \\[6pt]
@@ -155,9 +155,9 @@
     \end{equation}
     %
     \noindent where $z$ is the engine number of cylinders and $V_{du}$ the unit displacement volume. Let further $S$,  $D$,  and
-    $r_{SD}$ be the piston stroke, diameter, and their ratio, respectively. Moreover, let $R$, $L$, and $r_{LR}$  be  the  crank
-    radius, conecting rod length, and their ratio, respectively. Let further $x$ and $\alpha$ be the instantaneous piston
-    position, measured from the top dead center (TDC), and crank angular position, respectively, so that $\alpha = 0$ at the
+    $r_{SD}$ be the piston stroke, diameter, and their ratio, respectively. Moreover, let $R$, $L$, and $r_{RL}$  be  the  crank
+    radius, conecting rod length, and their ratio, respectively. Let further  $x$  and  $\alpha$  be  the  instantaneous  piston
+    position, measured from the top dead center (TDC), and crank angular position, respectively, so that $\alpha  =  0$  at  the
     TDC, then, the following hold~\cite{2012-BrunettiF-Blucher, 2017-NaaktgeborenC-IntJMechEngEduc}:%
     %
     \begin{align}
@@ -170,9 +170,7 @@
         \label{eq:x}
         x(\alpha)   &=
             L\left(
-                1 - \sqrt{
-                    1 - \left(\frac{R}{L}\sin\alpha\right)^2
-                }
+                1 - \sqrt{1 - (r_{RL}\sin\alpha)^2}
             \right) \nonumber\\
                     &+ R(1 - \cos\alpha).
     \end{align}
